@@ -10,6 +10,10 @@ import "../global.css";
 export default function RootLayout() {
    const [fontsLoaded] = useFonts({
     Poppins: require('@/assets/fonts/Poppins-Regular.ttf'),
+    'Poppins-SemiBold': require('@/assets/fonts/Poppins-SemiBold.ttf'),
+    'Poppins-Bold': require('@/assets/fonts/Poppins-Bold.ttf'),
+    'Poppins-Medium': require('@/assets/fonts/Poppins-Medium.ttf'),
+
   })
 
   if (!fontsLoaded) {
@@ -21,6 +25,9 @@ export default function RootLayout() {
       <SafeAreaProvider>
         <Stack>
           <Stack.Screen name="Onboarding" options={{
+            headerShown:false,
+          }} />
+          <Stack.Screen name="Signup" options={{
             headerShown:false,
           }} />
         </Stack>
