@@ -1,15 +1,17 @@
 export const onboardingSlides = [
-    {
-        title: "Explore. Create. Earn.",
-        description: "Become a vendor, inspire with reels, or simply shop your perfect fit.",
-        image: require("@/assets/images/onboarding4.png"),
-    },
-
+   
     {
         title: "Style Meets Technology",
         description: "Discover the latest trends, try them virtually, and shop with confidence.",
         image: require("@/assets/images/onboarding1.png"),
     },
+
+     {
+        title: "Explore. Create. Earn.",
+        description: "Become a vendor, inspire with reels, or simply shop your perfect fit.",
+        image: require("@/assets/images/onboarding4.png"),
+    },
+
 
     {
         title: "Virtual Try-On with AR",

@@ -13,8 +13,8 @@ export default function Onboarding() {
           <View className='mt-[32px] gap-[16px] items-center'>
             <Button color='#EB6363' text='Create an account' link='/Signup/'/>
             <View className='flex-row gap-2 justify-center'>
-              <Text className="text-base font-normal text-[#888888]">Already have an account?</Text>
-              <Link href={'..'} className='text-base font-medium text-[#EB6363]'>Login</Link>
+              <Text style={{fontFamily:'Poppins'}} className="text-base font-normal text-[#888888]">Already have an account?</Text>
+              <Link style={{fontFamily:'Poppins'}} href={'..'} className='text-base font-medium text-[#EB6363]'>Login</Link>
             </View>
           </View>
         </View>
