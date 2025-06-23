@@ -7,11 +7,11 @@ import { Link } from 'expo-router'
 
 export default function Onboarding() {
   return (
-    <SafeAreaView className='flex-1'>
-        <View className=" flex-1 w-full bg-white justify-center">
+    <SafeAreaView className='flex-1' edges={['top', 'bottom']}>
+        <View className=" flex-1 w-full bg-white justify-between py-16">
           <Slideshow/>
           <View className='mt-[32px] gap-[16px] items-center'>
-            <Button color='#EB6363' text='Create an account'/>
+            <Button color='#EB6363' text='Create an account' link='Signup/SignUp'/>
             <View className='flex-row gap-2 justify-center'>
               <Text className="text-base font-normal text-[#888888]">Already have an account?</Text>
               <Link href={'..'} className='text-base font-medium text-[#EB6363]'>Login</Link>
