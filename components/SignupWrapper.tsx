@@ -16,7 +16,7 @@ export default function SignupWrapper({children,optional,onpress}:Props) {
         <View className='w-full flex-row justify-between'>
             <Ionicons name="chevron-back-sharp" size={30} color="black" />
             {optional?(
-                <SmallButton onpress={onpress}/>
+                <SmallButton onpress={onpress} text='skip'/>
             )
 
             :null}
