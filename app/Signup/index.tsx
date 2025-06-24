@@ -6,6 +6,7 @@ import { useSignupStore } from '@/store/SignupStore';
 import {text_gray} from '@/constants/Colors'
 import Button from '@/components/Button';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import FormWrapper from '@/components/FormWrapper';
 
 export default function EmailScreen() {
   const [emailInput, setEmailInput] = useState('');
@@ -21,9 +22,7 @@ export default function EmailScreen() {
     <View className="flex-1 py-10  justify-between ">
       <View className='gap-4'>
         <Ionicons name="chevron-back-sharp" size={30} color="black" />
-        <Text style={{fontFamily:'Poppins-SemiBold'}} className="text-2xl ">Enter your email address</Text>
-        <Text style={{fontFamily:'Poppins-Medium', color:text_gray,}} className='text-base ' >Add an email to secure your account and stay updated.</Text>
-        <View className='bg-[#FDEFEF80] py-5 px-4 rounded-2xl'>
+        <FormWrapper title='Enter your email address' description='Add an email to secure your account and stay updated.'>
           <TextInput
             value={emailInput}
             onChangeText={setEmailInput}
@@ -32,11 +31,11 @@ export default function EmailScreen() {
             keyboardType="email-address"
             autoCapitalize="none"
           />
-        </View>
+        </FormWrapper>
       </View>
 
  
-      <Button text='Submit Email' link={'./EmailVerify'}/>
+      <Button text='Submit Email' link={'/Signup/EmailVerify'}/>
     </View>
   );
 }
