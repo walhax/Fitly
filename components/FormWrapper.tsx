@@ -7,7 +7,7 @@ type prop= PropsWithChildren<{
   description:string,
 } >
 
-export default function FormWrapper({children, title, description}:prop){
+export default function FormWrapper({children, title, description, }:prop){
   return (
     <View className='gap-4'>
       <Text style={{fontFamily:'Poppins-SemiBold'}} className="text-2xl ">{title}</Text>

@@ -1,7 +1,11 @@
-import { View, Text, TextInput, Pressable } from 'react-native';
+import { TextInput, } from 'react-native';
 import { useState } from 'react';
-import { useSignupStore } from '@/store/SignupStore';
 import { router } from 'expo-router';
+import { useSignupStore } from '@/store/SignupStore';
+import Button from '@/components/Button';
+import FormWrapper from '@/components/FormWrapper';
+import SignupWrapper from '@/components/SignupWrapper';
+
 
 export default function PhoneScreen() {
   const [phoneInput, setPhoneInput] = useState('');
@@ -10,22 +14,26 @@ export default function PhoneScreen() {
   const handleNext = () => {
     if (phoneInput.length < 10) return alert('Enter valid phone number');
     setPhone(phoneInput);
-    router.push('./PhoneVerify');
+    router.push('/Signup/PhoneVerify');
   };
 
   return (
-    <View className="flex-1 justify-center gap-4">
-      <Text className="text-xl font-semibold">Enter your phone number</Text>
-      <TextInput
-        value={phoneInput}
-        onChangeText={setPhoneInput}
-        className="border border-gray-300 p-3 rounded-md"
-        keyboardType="phone-pad"
-        placeholder="08012345678"
-      />
-      <Pressable onPress={handleNext} className="bg-blue-600 p-3 rounded-md">
-        <Text className="text-white text-center">Continue</Text>
-      </Pressable>
-    </View>
+    <SignupWrapper optional={true} onpress={()=>router.push('/Signup/PhoneVerify')}>
+         
+      <FormWrapper title='Enter your phone number' description='Add a phone number to secure your account and stay updated.'>
+        <TextInput
+          value={phoneInput}
+          onChangeText={setPhoneInput}
+          className="border border-[#CECECE] bg-white py-4 px-4 rounded-md"
+          placeholder="Phone Number"
+          keyboardType="email-address"
+          autoCapitalize="none"
+        />
+      </FormWrapper>
+
+      <Button text='Submit Number' onpress={handleNext}/>
+    </SignupWrapper>
+
+    
   );
 }

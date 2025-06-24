@@ -1,20 +1,31 @@
 import { View } from 'react-native'
 import React from 'react'
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { ImageBackground } from 'expo-image';
+import { SmallButton } from './Button';
 
 type Props = {
-  children: React.ReactNode;
+    children: React.ReactNode;
+    optional?:boolean,
+    onpress?:any
 };
 
-export default function SignupWrapper({children}:Props) {
+export default function SignupWrapper({children,optional,onpress}:Props) {
   return (
 
     <View className="flex-1 py-10 gap-4">
-      <Ionicons name="chevron-back-sharp" size={30} color="black" />
-      <View className='flex-1 justify-between'>
-        {children}
-      </View>
+        <View className='w-full flex-row justify-between'>
+            <Ionicons name="chevron-back-sharp" size={30} color="black" />
+            {optional?(
+                <SmallButton onpress={onpress}/>
+            )
+
+            :null}
+            
+        </View>
+        
+        <View className='flex-1 justify-between'>
+            {children}
+        </View>
       
     </View>
   )
