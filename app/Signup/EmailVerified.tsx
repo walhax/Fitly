@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native';
+import { View} from 'react-native';
 import { router } from 'expo-router';
 import SignupWrapper from '@/components/SignupWrapper';
 import Verified from '@/components/Verified';

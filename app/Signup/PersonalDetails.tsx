@@ -7,7 +7,7 @@ import FormWrapper from '@/components/FormWrapper';
 import SignupWrapper from '@/components/SignupWrapper';
 
 
-export default function PhoneScreen() {
+export default function PersonalDetails() {
   const [phoneInput, setPhoneInput] = useState('');
   const setPhone = useSignupStore((s) => s.setPhone);
 
@@ -18,7 +18,7 @@ export default function PhoneScreen() {
   };
 
   return (
-    <SignupWrapper optional={true} onpress={()=>router.push('/Signup/PersonalDetails')}>
+    <SignupWrapper optional={true} onpress={()=>router.push('/Signup/PhoneVerify')}>
          
       <FormWrapper title='Enter your phone number' description='Add a phone number to secure your account and stay updated.'>
         <TextInput
