@@ -25,7 +25,7 @@ export default function EmailScreen() {
           value={emailInput}
           onChangeText={setEmailInput}
           className="border border-[#CECECE] bg-white py-4 px-4 rounded-md"
-          placeholder="you@example.com"
+          placeholder="Email Address"
           keyboardType="email-address"
           autoCapitalize="none"
         />
