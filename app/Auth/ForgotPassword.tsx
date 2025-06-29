@@ -7,7 +7,7 @@ import FormWrapper from '@/components/FormWrapper';
 import SignupWrapper from '@/components/SignupWrapper';
 
 
-export default function PersonalDetails() {
+export default function ForgotPassword() {
   const [firstnameInput, setfirstnameInput] = useState('');
   const [lastnameInput, setlastnameInput] = useState('');
   const [dobInput, setdobInput] = useState('');
