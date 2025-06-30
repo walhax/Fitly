@@ -10,11 +10,10 @@ import SignupWrapper from '@/components/SignupWrapper';
 export default function ForgotPassword() {
   const [firstnameInput, setfirstnameInput] = useState('');
   const [lastnameInput, setlastnameInput] = useState('');
-  const [dobInput, setdobInput] = useState('');
 
 
   const handleNext = () => {
-    if (!firstnameInput||!lastnameInput||!dobInput) return alert('Enter valid phone number');
+    if (!firstnameInput||!lastnameInput) return alert('Enter valid phone number');
     router.push('/Signup/Address');
   };
 
@@ -27,27 +26,13 @@ export default function ForgotPassword() {
                 value={firstnameInput}
                 onChangeText={setfirstnameInput}
                 className="border border-[#CECECE] bg-white py-4 px-4 rounded-md"
-                placeholder="Enter Email"
+                placeholder="Email Address"
                 autoCapitalize="none"
             />
-
-            <TextInput
-                value={lastnameInput}
-                onChangeText={setlastnameInput}
-                className="border border-[#CECECE] bg-white py-4 px-4 rounded-md"
-                placeholder="Password"
-                autoCapitalize="none"
-            />
-        
-            <View className='flex-row justify-end'>
-                <Link href='/Auth/ForgotPassword'>
-                    <Text className='color-[#EB6363]'>Forgot Password</Text>
-                </Link>
-            </View>
         </View>
       </FormWrapper>
 
-      <Button text='Login' onpress={handleNext}/>
+      <Button text='Next' onpress={handleNext}/>
     </SignupWrapper>
 
     

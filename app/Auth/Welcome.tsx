@@ -10,11 +10,10 @@ import SignupWrapper from '@/components/SignupWrapper';
 export default function PersonalDetails() {
   const [firstnameInput, setfirstnameInput] = useState('');
   const [lastnameInput, setlastnameInput] = useState('');
-  const [dobInput, setdobInput] = useState('');
 
 
   const handleNext = () => {
-    if (!firstnameInput||!lastnameInput||!dobInput) return alert('Enter valid phone number');
+    if (!firstnameInput||!lastnameInput) return alert('Enter valid phone number');
     router.push('/Signup/Address');
   };
 
