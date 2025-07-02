@@ -1,7 +1,6 @@
-import { TextInput, View, Text} from 'react-native';
+import { TextInput, View} from 'react-native';
 import { useState } from 'react';
-import { Link, router } from 'expo-router';
-import { useSignupStore } from '@/store/SignupStore';
+import { router } from 'expo-router';
 import Button from '@/components/Button';
 import FormWrapper from '@/components/FormWrapper';
 import SignupWrapper from '@/components/SignupWrapper';
@@ -9,11 +8,10 @@ import SignupWrapper from '@/components/SignupWrapper';
 
 export default function ForgotPassword() {
   const [firstnameInput, setfirstnameInput] = useState('');
-  const [lastnameInput, setlastnameInput] = useState('');
 
 
   const handleNext = () => {
-    if (!firstnameInput||!lastnameInput) return alert('Enter valid phone number');
+    if (!firstnameInput) return alert('Enter valid phone number');
     router.push('/Signup/Address');
   };
 

@@ -1,7 +1,6 @@
 import { TextInput, View, Text} from 'react-native';
 import { useState } from 'react';
 import { Link, router } from 'expo-router';
-import { useSignupStore } from '@/store/SignupStore';
 import Button from '@/components/Button';
 import FormWrapper from '@/components/FormWrapper';
 import SignupWrapper from '@/components/SignupWrapper';
